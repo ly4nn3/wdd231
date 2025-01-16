@@ -16,7 +16,7 @@ header {
     font-family: "Croissant One", Georgia, 'Times New Roman', Times, serif;
     position: relative;
     background-color: var(--accent1-color);
-    color: var(var(--primary-color));
+    color: var(--primary-color);
     padding: 1rem;
     
 }
