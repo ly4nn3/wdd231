@@ -18,6 +18,7 @@ header {
     background-color: var(--accent1-color);
     color: var(var(--primary-color));
     padding: 1rem;
+    
 }
 
 body {
@@ -126,13 +127,16 @@ footer img {
 
 .profile {
     display: flex;
+    flex-direction: row;
+    width: 100%;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
 }
 
 .profile img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     border-radius: 5px;
     margin: 1rem;
 }
@@ -308,6 +312,11 @@ footer img {
     .profile {
         flex-direction: column;
         text-align: center;
+    }
+
+    .profile img {
+        width: 100px;
+        height: 100px;
     }
 
     .filters {
