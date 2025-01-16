@@ -164,7 +164,7 @@ footer img {
 }
 
 .course-card .credits {
-    color: var(--accent2-color);
+    color: var(--secondary-color);
     font-weight: bold;
     font-style: italic;
 }
