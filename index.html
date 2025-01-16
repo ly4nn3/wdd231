@@ -15,31 +15,45 @@
     <meta property="og:url" content="https://ly4nn3.github.io/wdd231">
 
     <title>Julyanne Lee - WDD 231</title>
-
+    <!-- Fonts & stylesheets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
-
+    <!-- Scripts -->
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/dynamics.js" defer></script>
+    
 </head>
 
 <body>
     <header>
-        <img src="images/profile.jpg" alt="Julyanne Lee">
-        <h1>Julyanne Lee Rue-Yuin</h1>
+        <div class="profile">
+            <img src="images/profile.jpg" alt="Julyanne Lee">
+            <h1>Julyanne Lee Rue-Yuin</h1>
+        </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Chamber</a>
-            <a href="#">GitHub Profile</a>
-            <a href="https://www.linkedin.com/in/julyanne-lee-9606ba2a0/">LinkedIn</a>
+            <div class="hamburger-menu">☰</div>
+            <ul>
+                <a href="https://ly4nn3.github.io/wdd231" class="active">Home</a>
+                <a href="https://ly4nn3.github.io/wdd231/chamber.html">Chamber</a>
+                <a href="https://github.com/ly4nn3">GitHub Profile</a>
+                <a href="https://www.linkedin.com/in/julyanne-lee-9606ba2a0/">LinkedIn</a>
+            </ul>
         </nav>
     </header>
 
     <main>
         <section>
             <h2>Course Work</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+            </ul>
         </section>
 
         <section>
@@ -52,6 +66,12 @@
 
         <section>
             <h2>Web and Computer Programming Certificates</h2>
+            <div class="filters">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+            <div id="courses"></div>
         </section>
     </main>
 
