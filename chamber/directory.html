@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta data -->
     <meta charset="UTF-8">
@@ -8,19 +9,26 @@
     <meta name="author" content="Julyanne Lee Rue Yuin">
     <meta property="og:title" content="PJ Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.pexels.com/photos/1173771/pexels-photo-1173771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    <meta property="og:image"
+        content="https://images.pexels.com/photos/1173771/pexels-photo-1173771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
     <meta property="og:url" content="https://ly4nn3.github.io/wdd231/chamber/directory.html">
     <title>PJ Chamber of Commerce</title>
     <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/directory.css">
     <link rel="icon" href="chamber-favicon.ico" type="image/x-icon">
     <!-- Scripts -->
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/displaymembers.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -31,6 +39,7 @@
             </div>
         </div>
         <nav class="nav-menu">
+            <div class="hamburger-menu">☰</div>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Business Directory</a></li>
@@ -44,7 +53,7 @@
         <section>
             <h2>PJ Chamber Member Directory</h2>
             <div id="categories">
-                
+
             </div>
             <div id="businesses"></div>
         </section>
@@ -77,4 +86,5 @@
         </div>
     </footer>
 </body>
+
 </html>
