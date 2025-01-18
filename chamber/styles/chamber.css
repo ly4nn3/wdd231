@@ -91,6 +91,10 @@ footer {
     text-decoration: underline;
 }
 
+.nav-menu a.active {
+    color: var(--accent1-color);
+}
+
 .hamburger-menu {
     display: none;
     cursor: pointer;
@@ -259,8 +263,13 @@ footer {
 }
 
 /* Footer */
+.contact {
+    font-weight: 700;
+    margin: 0.5rem;
+}
+
 .contact-info p {
-    line-height: 0.5;
+    font-weight: 400;
 }
 
 .social-links a {
@@ -269,6 +278,10 @@ footer {
 
 .social-links img {
     width: 5rem;
+}
+
+.copyright {
+    margin: 0.5rem;
 }
 
 /* ID Selectors */
@@ -298,7 +311,9 @@ footer {
     }
 
     footer {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        justify-items: left;
+        padding: 1rem;
     }
 
     .logo {
@@ -340,6 +355,10 @@ footer {
     .list-view .member-card .card-content [data-type="website"] {
         grid-column: 1;
     }
+
+    .social-links {
+        align-self: center;
+    }
 }
 
 @media screen and (min-width: 481px) {
@@ -358,6 +377,13 @@ footer {
     header {
         flex-direction: row;
         padding: 1rem;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+        justify-items: left;
     }
 
     .logo {
