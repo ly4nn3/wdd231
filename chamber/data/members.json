@@ -6,7 +6,7 @@
             "number": "03-7652 2838",
             "type": "Coworking Space",
             "website": "https://inspace.com.my/",
-            "image": "chamber/images/inspace.png",
+            "image": "./images/inspace.png",
             "membership": 3
         },
         {
@@ -15,7 +15,7 @@
             "number": "010-771 1376",
             "type": "Event Planning",
             "website": "https://www.caratcomms.com.my/",
-            "image": "chamber/images/carat-comms.png",
+            "image": "./images/carat-comms.png",
             "membership": 1
         },
         {
@@ -24,7 +24,7 @@
             "number": "03-8800 5205",
             "type": "Information Technology",
             "website": "https://zen-y.com/",
-            "image": "chamber/images/zen-y.png",
+            "image": "./images/zen-y.png",
             "membership": 2
         },
         {
@@ -33,7 +33,7 @@
             "number": "012-883 0557",
             "type": "Law Firm",
             "website": "https://www.ras.legal/",
-            "image": "chamber/images/ras.png",
+            "image": "./images/ras.png",
             "membership": 1
         },
         {
@@ -42,7 +42,7 @@
             "number": "012-652 2138",
             "type": "Interior Design",
             "website": "https://viscreative.com/",
-            "image": "chamber/images/viscreative.png",
+            "image": "./images/viscreative.png",
             "membership": 2
         },
         {
@@ -51,7 +51,7 @@
             "number": "03-7880 9595",
             "type": "Estate Planning",
             "website": "https://as-salihin.com/",
-            "image": "chamber/images/as-salihin.png",
+            "image": "./images/as-salihin.png",
             "membership": 1
         },
         {
@@ -60,7 +60,7 @@
             "number": "03-7887 3109",
             "type": "Dog Cafe",
             "website": "https://www.facebook.com/HUSKISSPJ/",
-            "image": "chamber/images/huskiss.png",
+            "image": "./images/huskiss.png",
             "membership": 3
         }
     ]
