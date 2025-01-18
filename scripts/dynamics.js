@@ -90,6 +90,10 @@ function displayCourses(filteredCourses = courses) {
     const coursesContainer = document.getElementById('courses');
     coursesContainer.innerHTML = ''; // Clear existing content
 
+    const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+    
+    document.querySelector('.credits-counter').textContent = `Total credits for the courses listed: ${totalCredits}`;
+
     filteredCourses.forEach(course => {
         const courseElement = document.createElement('div');
         courseElement.className = `course-card ${course.completed ? 'completed' : 'incomplete'}`;
