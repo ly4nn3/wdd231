@@ -138,3 +138,4 @@ function setActiveFilter(filterId) {
 }
 
 displayCourses();
+setActiveFilter('all');
