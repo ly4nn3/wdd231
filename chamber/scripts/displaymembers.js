@@ -69,6 +69,7 @@ const displayMembers = (members) => {
 
         image.src = member.image;
         image.alt = `${member.name} logo`;
+        image.width = 150;
         name.textContent = member.name;
         address.textContent = member.address;
         number.textContent = member.number;
