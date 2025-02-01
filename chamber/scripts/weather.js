@@ -33,18 +33,18 @@ async function apiFetch() {
 // Current weather section display
 function displayResults(data) {
     // For the weather icon
-    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     weatherIcon.setAttribute('SRC', iconsrc);
     weatherIcon.setAttribute('alt', data.weather[0].description);
 
     // For the current temp
-    currentTemp.innerHTML = `${Math.round(data.main.temp)} &deg;C`;
+    currentTemp.innerHTML = `<strong>${Math.round(data.main.temp)}</strong> &deg;C`;
 
     // For the weather desription
     weatherDesc.textContent = data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1);
 
     // For humidity
-    humidity.textContent = `Humidity: ${data.main.humidity}%`;
+    humidity.textContent = `Humidity : ${data.main.humidity}%`;
 
     // For sunrise and sunset
     const sunriseTime = new Date(data.sys.sunrise * 1000).toLocaleTimeString(`en-US`, {
@@ -59,8 +59,8 @@ function displayResults(data) {
         hour12: true
     });
 
-    sunrise.textContent = `Sun rises at ${sunriseTime}`
-    sunset.textContent = `Sun sets at ${sunsetTime}`
+    sunrise.textContent = `Sunrise — ${sunriseTime}`
+    sunset.textContent = `Sunset — ${sunsetTime}`
 }
 
 async function getForecast() {
@@ -94,10 +94,10 @@ function displayForecast(data) {
     const dayAfterDate = dayAfter.toISOString().split('T')[0];
     console.log(todayDate, tomorrowDate, dayAfterDate);
 
-    // Filter forecast for the needed days at 3pm
-    const todayForecast = forecastList.find(item => item.dt_txt.includes(todayDate) && item.dt_txt.includes('15:00'));
-    const tomorrowForecast = forecastList.find(item => item.dt_txt.includes(tomorrowDate) && item.dt_txt.includes('15:00'));
-    const dayAfterForecast = forecastList.find(item => item.dt_txt.includes(dayAfterDate) && item.dt_txt.includes('15:00'));
+    // Filter forecast for the needed days at 12am
+    const todayForecast = forecastList.find(item => item.dt_txt.includes(todayDate) && item.dt_txt.includes('00:00'));
+    const tomorrowForecast = forecastList.find(item => item.dt_txt.includes(tomorrowDate) && item.dt_txt.includes('00:00'));
+    const dayAfterForecast = forecastList.find(item => item.dt_txt.includes(dayAfterDate) && item.dt_txt.includes('00:00'));
 
     if (todayForecast) {
         forecastToday.innerHTML = `Today: ${Math.round(todayForecast.main.temp)} &deg;C`;
