@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page of the Petaling Jaya Chamber of Commerce site.">
+    <meta name="author" content="Julyanne Lee Rue Yuin">
+    <meta property="og:title" content="PJ Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://images.pexels.com/photos/1173771/pexels-photo-1173771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    <meta property="og:url" content="https://ly4nn3.github.io/wdd231/chamber/directory.html">
+    <title>PJ Chamber of Commerce</title>
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="icon" href="chamber-favicon.ico" type="image/x-icon">
+    <!-- Scripts -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo of PJ Chamber of Commerce">
+            <div>
+                <h1>Petaling Jaya</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <div class="hamburger-menu">☰</div>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="min-width: 500px">
+                <source srcset="images/hero-medium.webp" media="min-width: 1000px">
+                <img src="images/hero-large.webp" alt="Petaling Jaya" width="1500" height="750">
+            </picture>
+            <div class="hero-call">
+                <a href="#" class="call-button">Join Now</a>
+            </div>
+        </div>
+        <h2 class="page-title">Home</h2>
+        <div class="section-grid">
+            <section class="current-events">
+                <h3 class="section-header">Current Events</h3>
+                <div class="events">
+                    <div class="event-card">
+                        <img src="https://fastly.picsum.photos/id/0/300/300.jpg?hmac=D42SK55rxLhhO-MmBOX5_8Og-V8RPNCG9g9O44_rXcM" alit="Event 1" width="200" height="200">
+                        <div class="event-info">
+                            <h4>Event 1</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aut labore quas accusamus eos, quam nulla, eaque laudantium minus magni temporibus delectus ad numquam nobis!</p>
+                            <p class="date">February 2, 2025 | 5.00pm</p>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="current-weather">
+                <h3 class="section-header">Current Weather</h3>
+                <div id="current-weather-container">
+                    <img id="weather-icon" src="" alt="">
+                    <p id="current-temp"></p>
+                    <p id="weather-desc"></p>
+                    <p id="humidity"></p>
+                    <p id="sunrise"></p>
+                    <p id="sunset"></p>
+                </div>
+            </section>
+
+            <section class="weather-forecast">
+                <h3 class="section-header">Weather Forecast</h3>
+                <div id="weather-forecast-container">
+                    <p id="forecast-today"></p>
+                    <p id="forecast-tomorrow"></p>
+                    <p id="forecast-dayafter"></p>
+                </div>
+            </section>
+        </div>
+        <section class="company-spotlights">
+            <h3>Business Spotlights</h3>
+            <div id="spotlights-container">
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <p>PJ Chamber of Commerce</p>
+            <div class="contact-info">
+                <p>B 96 Jln Ss21/39</p>
+                <p>Petaling Jaya, Selangor</p>
+                <p>info@pjcc.org</p>
+                <p>(60) 123-445588</p>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="https://youtube.com">
+                <img src="images/youtube.svg" alt="Youtube">
+            </a>
+            <a href="https://x.com">
+                <img src="images/twitter.svg" alt="X / Twitter">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+        </div>
+        <div class="copyright">
+            <p>WDD231 Class Project</p>
+            <p>Julyanne Lee Rue-Yuin</p>
+            <p>&copy;<span id="currentyear"></span> PJ Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
