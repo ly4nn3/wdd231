@@ -142,8 +142,8 @@ footer {
 
 .hero-call {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.5rem;
+    right: 2rem;
 }
 
 .call-button {
@@ -151,10 +151,12 @@ footer {
     background-color: var(--accent1-color);
     color: var(--text1-color);
     padding: 1rem;
-    border: 2px solid var(--accent1-color);
+    border: 2px solid var(--secondary-color);
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
     transition: background-color 0.3s ease;
 }
 
@@ -515,6 +517,12 @@ footer {
         justify-content: center;
     }
 
+    .call-button {
+        font-size: 1.1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
     .section-grid {
         grid-template-columns: 1fr;
     }
@@ -603,6 +611,14 @@ footer {
         padding: 1rem;
         text-align: center;
         z-index: 1000;
+    }
+
+    .hero-call {
+        margin-left: 2rem;
+    }
+
+    .call-button {
+        font-size: 1rem;
     }
 
     .event-card {
