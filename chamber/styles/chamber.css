@@ -633,7 +633,7 @@ footer {
         padding: 0.5rem;
         word-wrap: break-word;
         word-break: break-all;
-        overflow: wrap;
+        overflow-wrap: break-word;
     }
 
     #businesses.grid-view {
