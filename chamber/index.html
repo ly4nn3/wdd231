@@ -53,8 +53,8 @@
     <main>
         <div class="hero">
             <picture>
-                <source srcset="images/hero-small.webp" media="min-width: 500px">
-                <source srcset="images/hero-medium.webp" media="min-width: 1000px">
+                <source srcset="images/hero-small.webp" media="(min-width: 500px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 1000px)">
                 <img src="images/hero-large.webp" alt="Petaling Jaya" width="1500" height="750">
             </picture>
             <div class="hero-call">
@@ -67,7 +67,7 @@
                 <h3 class="section-header">Current Events</h3>
                 <div class="events">
                     <div class="event-card">
-                        <img src="https://fastly.picsum.photos/id/0/300/300.jpg?hmac=D42SK55rxLhhO-MmBOX5_8Og-V8RPNCG9g9O44_rXcM" alit="Event 1" width="200" height="200">
+                        <img src="https://fastly.picsum.photos/id/0/300/300.jpg?hmac=D42SK55rxLhhO-MmBOX5_8Og-V8RPNCG9g9O44_rXcM" alt="Event 1" width="200" height="200">
                         <div class="event-info">
                             <h4>Event 1</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aut labore quas accusamus eos, quam nulla, eaque laudantium minus magni temporibus delectus ad numquam nobis!</p>
@@ -81,7 +81,7 @@
             <section class="current-weather">
                 <h3 class="section-header">Current Weather</h3>
                 <div id="current-weather-container">
-                    <img id="weather-icon" src="" alt="">
+                    <img id="weather-icon" src="script" alt="weather icon">
                     <p id="current-temp"></p>
                     <p id="weather-desc"></p>
                     <p id="humidity"></p>
