@@ -29,9 +29,8 @@ header h1 {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
 h2 {
@@ -136,6 +135,150 @@ footer {
     background-color: var(--accent2-color);
 }
 
+/* Home Page */
+.hero {
+    position: relative;
+}
+
+.hero-call {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.call-button {
+    display: inline-block;
+    background-color: var(--accent1-color);
+    color: var(--text1-color);
+    padding: 1rem;
+    border: 2px solid var(--accent1-color);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.call-button:hover {
+    background-color: rgb(132, 146, 159, 0.8);
+    border: 2px solid white;
+    color: var(--text2-color);
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.page-title {
+    text-align: left;
+    margin: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+    color: var(--text1-color);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.section-header {
+    padding: 0.8rem;
+    margin: 0;
+    background-color: var(--accent2-color);
+    color: var(--text1-color);
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+/* Event content */
+.current-events,
+.current-weather,
+.weather-forecast,
+.spotlight-card {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.event-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.event-card img {
+    width: 150px;
+    height: auto;
+}
+
+.event-info h4 {
+    margin: 0;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Link colors */
+.event-info a,
+.spotlight-content a,
+.member-card a {
+    text-decoration: underline;
+    color: var(--link-color);
+}
+
+.event-info a:hover,
+.spotlight-content a:hover,
+.member-card a:hover {
+    color: var(--accent1-color);
+}
+
+/* Spotlights */
+.company-spotlights h3 {
+    margin: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--text1-color);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.spotlight-card {
+    text-align: center;
+    padding: 0 0 1rem 0;
+}
+
+.spotlight-content h4 {
+    padding: 0.8rem;
+    margin: 0;
+    background-color: var(--accent2-color);
+    color: var(--text1-color);
+    font-size: 1.2rem;
+}
+
+.spotlight-content img {
+    max-width: 150px;
+    justify-self: center;
+    padding-top: 2rem;
+}
+
+.membership {
+    font-style: italic;
+}
+
+.link {
+    padding: 1rem;
+}
+
+/* Drectory Page */
 /* Businesses member cards */
 .member-card {
     display: flex;
@@ -152,15 +295,6 @@ footer {
 
 .member-card img {
     max-width: 150px;
-}
-
-.member-card a {
-    text-decoration: underline;
-    color: var(--link-color);
-}
-
-.member-card a:hover {
-    color: var(--accent1-color);
 }
 
 /* Member cards grid view */
@@ -285,6 +419,45 @@ footer {
 }
 
 /* ID Selectors */
+/* Home Page */
+/* Weather content */
+#current-weather-container,
+#weather-forecast-container {
+    padding: 1rem;
+}
+
+#current-weather-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+#current-weather-container p {
+    margin: 0.5rem;
+}
+
+#weather-icon {
+    grid-column: 1;
+    grid-row: 1 / span 6;
+    background-color: var(--accent1-color);
+    border-radius: 50px;
+    justify-self: center;
+}
+
+#weather-forecast-container {
+    padding-left: 1.5rem;
+}
+
+/* Spotlights */
+#spotlights-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+/* Directory Page */
 /* Businesses grid & list view */
 #businesses.grid-view {
     display: grid;
@@ -340,6 +513,14 @@ footer {
         padding: 0;
         margin: 0.5rem;
         justify-content: center;
+    }
+
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #spotlights-container {
+        grid-template-columns: 1fr;
     }
 
     .list-view .member-card .card-content {
@@ -421,6 +602,22 @@ footer {
         background-color: var(--primary-color);
         padding: 1rem;
         text-align: center;
+        z-index: 1000;
+    }
+
+    .event-card {
+        grid-template-columns: 1fr;
+    }
+
+    .spotlight-card img {
+        max-width: 80px;
+    }
+
+    .link {
+        padding: 0.5rem;
+        word-wrap: break-word;
+        word-break: break-all;
+        overflow: wrap;
     }
 
     #businesses.grid-view {
