@@ -28,13 +28,13 @@ function displaySpotlights(members) {
         let membershipTitle = member.membership === 3 ? 'Gold' : 'Silver';
 
         spotlight.innerHTML = `
-            <img src="${member.image}" alt="${member.name} logo" width="150">
             <div class="spotlight-content">
-                <h3>${member.name}</h3>
+                <h4>${member.name}</h4>
+                <img src="${member.image}" alt="${member.name} logo" width="150">
                 <p>${member.address}</p>
                 <p>${member.number}</p>
-                <p>${membershipTitle} member</p>
-                <a href="${member.website} target="_blank">Visit Website</a>
+                <p class="membership">${membershipTitle} member</p>
+                <p class="link">Website: <a href="${member.website} target="_blank">${member.website}</a></p>
             </div>
         `;
         spotlightsContainer.appendChild(spotlight);
