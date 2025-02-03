@@ -5,8 +5,6 @@
     --accent2-color: #64473c;
     --border-color: var(--accent2-color);
     --completed-color: var(--accent1-color);
-    --incomplete-color: var(--accent2-color);
-    --tag-bg-color: var(--accent1-color);
     --button-bg-color: var(--accent2-color);
     --active-button-color: var(--accent1-color);
     --nav-bg-color: var(--primary-color);
@@ -30,7 +28,112 @@ body {
 
 nav {
     background-color: var(--secondary-color);
-    padding: 0.5rem;
+    padding: 0.5rem;/* Course buttons */
+.course-button {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    background-color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.course-button.completed {
+    background-color: var(--completed-color);
+}
+
+.button-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.course-code {
+    flex-grow: 1;
+}
+
+.completion-badge {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+/* Dialog styles */
+#course-details {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+}
+
+#course-details::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-header {
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.dialog-header h3 {
+    margin: 0;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dialog-content {
+    padding: 1rem;
+}
+
+.dialog-content h4 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.dialog-content p {
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+/* Keep your existing courses grid */
+#courses {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* Mobile media query */
+@media screen and (max-width: 480px) {
+    #courses {
+        grid-template-columns: 1fr;
+    }
+    
+    #course-details {
+        width: 95%;
+        margin: 10px;
+    }
+}
     border-radius: 10px;
 }
 
@@ -165,74 +268,40 @@ footer img {
     grid-template-rows: auto auto 1fr;
 }
 
-.course-card {
-    position: relative;
-    background-color: var(--primary-color);
-    border: 1px solid var(--border-color);
-    color: var(--secondary-color);
+.course-button {
+    width: 100%;
     padding: 1rem;
-    margin: 1rem 0;
+    text-align: left;
+    background-color: var(--primary-color);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    transition: all 0.4s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.course-card h3 {
-    color: var(--secondary-color);
-    margin-top: 0;
-    margin-right: 100px;
-}
-
-.course-card .credits {
-    color: var(--secondary-color);
-    font-weight: bold;
-    font-style: italic;
-}
-
-.course-card .description {
-    line-height: 1.5;
-    margin: 1rem 0;
-}
-
-.technologies {
-    margin-top: 1rem;
-}
-
-.completed {
+.course-button.completed {
     background-color: var(--completed-color);
-    border: 1px solid var(--secondary-color);
 }
 
-.completed .tech-tag {
-    background-color: var(--primary-color);
-    border-color: var(--secondary-color);
+.button-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
-.incomplete {
-    background-color: var(--primary-color);
-    border: 1px solid var(--border-color);
-}
-
-.tech-tag {
-    display: inline-block;
-    background-color: var(--tag-bg-color);
-    color: var(--secondary-color);
-    border: 1px solid var(--border-color);
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+.course-code {
+    flex-grow: 1;
 }
 
 .completion-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
-    font-weight: bold;
+    font-size: 0.8rem;
+    white-space: nowrap;
 }
 
 /* Credits counter */
@@ -272,12 +341,42 @@ footer img {
     color: var(--secondary-color);
 }
 
+.dialog-header {
+    padding-top: 1.8rem;
+}
+
+.dialog-header h3 {
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.close-button {
+    position: absolute;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    top: 10px;
+    right: 10px;
+}
+
 /* ID selectors */
 #courses {
     grid-row: 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+}
+
+#course-details {
+    width: 50%;
+    border: 2px dotted var(--accent2-color);
+    border-radius: 8px;
 }
 
 /* Mobile media query */

@@ -91,25 +91,47 @@ function displayCourses(filteredCourses = courses) {
     coursesContainer.innerHTML = ''; // Clear existing content
 
     const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
-    
     document.querySelector('.credits-counter').textContent = `Total credits for the courses listed: ${totalCredits}`;
 
     filteredCourses.forEach(course => {
-        const courseElement = document.createElement('div');
-        courseElement.className = `course-card ${course.completed ? 'completed' : 'incomplete'}`;
-
-        courseElement.innerHTML = `
-            <h3>${course.subject} ${course.number} - ${course.title}</h3>
-            <p class="credits">${course.credits} credits</p>
-            <p class="description">${course.description}</p>
-            <div class="technologies">
-                ${course.technology.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+        const courseButton = document.createElement('button');
+        courseButton.className = `course-button ${course.completed ? 'completed' : 'incomplete'}`;
+        courseButton.innerHTML = `
+            <div class="button-content">
+                <span class="course-code">${course.subject} ${course.number}</span>
+                ${course.completed ? '<span class="completion-badge">Completed</span>' : ''}
             </div>
-            ${course.completed ? '<span class="completion-badge">Completed</span>' : ''}
         `;
 
-        coursesContainer.appendChild(courseElement);
+        courseButton.addEventListener('click', () => showCourseDialog(course));
+
+        coursesContainer.appendChild(courseButton);
     });
+}
+
+function showCourseDialog(course) {
+    const dialog = document.getElementById('course-details');
+    
+    dialog.innerHTML = `
+        <div class="dialog-header">
+            <h3>${course.subject} ${course.number}</h3>
+            <button class="close-button">❌</button>
+        </div>
+        <div class="dialog-content">
+            <h4>${course.title}</h4>
+            <p><strong>Credits</strong>: ${course.credits}</p>
+            <p><strong>Certificate</strong>: ${course.certificate}</p>
+            <p>${course.description}</p>
+            <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+        </div>
+    `;
+
+    const closeButton = dialog.querySelector('.close-button');
+    closeButton.addEventListener('click', () => {
+        dialog.close();
+    });
+
+    dialog.showModal();
 }
 
 // Filter buttons
