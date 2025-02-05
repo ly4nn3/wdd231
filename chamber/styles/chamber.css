@@ -333,6 +333,32 @@ input, select, textarea {
     font-weight: 500;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    animation: colorPulse 8s infinite;
+}
+
+@keyframes colorPulse {
+    0% {
+        border-color: var(--primary-color);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    50% {
+        background-color: #c574ab;
+        border-color: var(--accent2-color);
+        box-shadow: 0 4px 8px rgba(247, 138, 37, 0.2); /* Using your accent1-color */
+    }
+    100% {
+        border-color: var(--primary-color);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    50% {
+        background-color: #c574ab;
+        border-color: var(--accent2-color);
+        box-shadow: 0 4px 8px rgba(247, 138, 37, 0.2); /* Using your accent1-color */
+    }
+    0% {
+        border-color: var(--primary-color);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 }
 
 .card h4 {
@@ -349,8 +375,6 @@ input, select, textarea {
 .info-btn:hover {
     animation: pulse 1s infinite;
     border: 1px solid var(--primary-color);
-    background-color: rgb(132, 146, 159, 0.9);
-    color: var(--text2-color);
     font-weight: 500;
 }
 
