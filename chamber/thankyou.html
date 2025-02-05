@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for your application to join the Petaling Jaya Chamber of Commerce.">
+    <meta name="author" content="Julyanne Lee Rue Yuin">
+    <meta property="og:title" content="PJ Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://images.pexels.com/photos/1173771/pexels-photo-1173771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    <meta property="og:url" content="https://ly4nn3.github.io/wdd231/chamber/directory.html">
+    <title>Thank you - PJ Chamber of Commerce</title>
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="icon" href="chamber-favicon.ico" type="image/x-icon">
+    <!-- Scripts -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.webp" alt="Logo of PJ Chamber of Commerce">
+            <div>
+                <h1>Petaling Jaya</h1>
+                <p>Chamber of Commerce</p>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <div class="hamburger-menu">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Business Directory</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Thank You For Your Application!</h2>
+        <div class="thankyou">
+            <p>Thank you for your interest in joining the Petaling Jaya Chamber of Commerce</p>
+            <p>Below is a summary of your application:</p>
+            <div id="results">
+
+            </div>
+            <p>We will review your application and contact you soon.</p>
+            <a href="index.html">Return to Homepage</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <p>PJ Chamber of Commerce</p>
+            <div class="contact-info">
+                <p>B 96 Jln Ss21/39</p>
+                <p>Petaling Jaya, Selangor</p>
+                <p>info@pjcc.org</p>
+                <p>(60) 123-445588</p>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="https://youtube.com">
+                <img src="images/youtube.svg" alt="Youtube">
+            </a>
+            <a href="https://x.com">
+                <img src="images/twitter.svg" alt="X / Twitter">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+        </div>
+        <div class="copyright">
+            <p>WDD231 Class Project</p>
+            <p>Julyanne Lee Rue-Yuin</p>
+            <p>&copy;<span id="currentyear"></span> PJ Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>
