@@ -48,6 +48,86 @@ footer {
     margin-top: 0;
 }
 
+/* Join page */
+form {
+    margin: 1rem auto;
+}
+
+fieldset {
+    border: none;
+    border-radius: 10px;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-left: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+input, select, textarea {
+    width: 80%;
+}
+
+input[required],
+select[required] {
+    border-left: 4px solid var(--accent1-color);
+}
+
+input[required]:hover,
+select[required]:hover {
+    border-left-color: rgba(255, 0, 0, 0.8);
+}
+
+input[required]:focus,
+select[required]:focus {
+    border-left-color: var(--accent1-color);
+    background: none;
+}
+
+textarea[name="description"] {
+    min-height: 150px;
+    resize: vertical;
+    padding: 1rem;
+}
+
+input[type="submit"] {
+    display: block;
+    width: auto;
+    margin-left: 1rem;
+    padding: 1rem;
+    background-color: var(--accent1-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--accent2-color);
+}
+
+input[type="submit"]:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+input, select, textarea {
+    display: block;
+    margin-top: 0.2rem;
+    padding: 0.2rem;
+    border: 1px solid var(--accent2-color);
+    border-radius: 5px;
+}
+
 /* Class selectors */
 /* Header logo */
 .logo {
@@ -91,7 +171,7 @@ footer {
 }
 
 .nav-menu a.active {
-    color: var(--accent1-color);
+    color: #ffb875;
 }
 
 .hamburger-menu {
@@ -135,7 +215,7 @@ footer {
     background-color: var(--accent2-color);
 }
 
-/* Home Page */
+/* Home Page hero image & call button */
 .hero {
     position: relative;
 }
@@ -228,6 +308,107 @@ footer {
 .date {
     font-style: italic;
     font-weight: 500;
+}
+
+/* Join page */
+.join-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--secondary-color);
+    margin: 1rem 0 1rem;
+    padding: 1rem;
+    align-items: center;
+    border: 1px solid var(--accent2-color);
+    border-radius: 0 100px;
+    background-color: var(--accent1-color);
+    font-weight: 500;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.info-btn {
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: 1px solid var(--accent2-color);
+}
+
+.info-btn:hover {
+    animation: pulse 1s infinite;
+    border: 1px solid var(--primary-color);
+    background-color: rgb(132, 146, 159, 0.9);
+    color: var(--text2-color);
+    font-weight: 500;
+}
+
+.thankyou {
+    text-align: center;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    45% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.modal {
+    width: 50%;
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.modal h2 {
+    background-color: var(--secondary-color);
+    color: var(--text2-color);
+    padding: 0.7rem;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: 1px solid;
+    border-radius: 1rem;
+}
+
+.close:hover {
+    color: var(--accent2-color);
+    cursor: pointer;
+}
+
+.price {
+    text-align: center;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.modal-content ul {
+    margin-left: 1rem;
+    padding-left: 2rem;
 }
 
 /* Link colors */
@@ -479,6 +660,17 @@ footer {
     margin: 0 auto;
 }
 
+/* Join page */
+#results {
+    box-shadow: 0 2px 15px rgb(9, 37, 62, 0.2);
+    max-width: 600px;
+    position: relative;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid var(--accent2-color);
+    border-radius: 5px;
+}
+
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
@@ -543,6 +735,10 @@ footer {
     .list-view .member-card .card-content [data-type="number"],
     .list-view .member-card .card-content [data-type="website"] {
         grid-column: 1;
+    }
+
+    .join-container {
+        grid-template-columns: 1fr;
     }
 
     .social-links {
