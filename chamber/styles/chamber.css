@@ -24,7 +24,7 @@ header {
     position: relative;
 }
 
-header h1 {
+header h2 {
     font-family: "Newsreader", Georgia, 'Times New Roman', serif;
 }
 
@@ -146,7 +146,7 @@ input, select, textarea {
     margin-left: 1rem;
 }
 
-.logo h1,
+.logo h2,
 .logo p {
     margin: 0;
 }
@@ -723,7 +723,7 @@ input, select, textarea {
         margin-left: 0.5rem;
     }
 
-    .logo h1 {
+    .logo h2 {
         font-size: 1.5rem;
     }
 
@@ -805,7 +805,7 @@ input, select, textarea {
         margin-right: 5rem;
     }
 
-    .logo h1 {
+    .logo h2 {
         font-size: 1.2rem;
         white-space: nowrap;
     }
@@ -916,7 +916,7 @@ input, select, textarea {
         padding: 0.25rem;
     }
 
-    .logo h1 {
+    .logo h2 {
         font-size: 1.2rem;
     }
 
