@@ -608,6 +608,73 @@ input, select, textarea {
     grid-column: 5;
 }
 
+/* Discover page */
+.visit-message {
+    background-color: rgb(132, 146, 159, 0.4);
+    color: var(--text1-color);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.discover-grid .places-card {
+    position: relative;
+    background-color: #f3f9ff;
+    border: 1px solid var(--accent2-color);
+    border-radius: 5px;
+    padding: 1rem;
+    min-height: 600px;
+    padding-bottom: 4rem;
+}
+
+.discover-grid .places-card figure {
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.discover-grid .places-card img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--accent2-color);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.discover-grid .places-card button {
+    position: absolute;
+    background-color: var(--accent1-color);
+    color: var(--text1-color);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.discover-grid .places-card button:hover {
+    background-color: var(--accent2-color);
+    color: var(--text2-color);
+}
+
+.discover-grid .places-card:nth-of-type(1) { grid-area: card1; }
+.discover-grid .places-card:nth-of-type(2) { grid-area: card2; }
+.discover-grid .places-card:nth-of-type(3) { grid-area: card3; }
+.discover-grid .places-card:nth-of-type(4) { grid-area: card4; }
+.discover-grid .places-card:nth-of-type(5) { grid-area: card5; }
+.discover-grid .places-card:nth-of-type(6) { grid-area: card6; }
+.discover-grid .places-card:nth-of-type(7) { grid-area: card7; }
+.discover-grid .places-card:nth-of-type(8) { grid-area: card8; }
+
 /* Footer */
 .contact {
     font-weight: 700;
@@ -629,6 +696,7 @@ input, select, textarea {
 .copyright {
     margin: 0.5rem;
 }
+
 
 /* ID Selectors */
 /* Home Page */
@@ -698,6 +766,26 @@ input, select, textarea {
     padding: 1rem;
     border: 1px solid var(--accent2-color);
     border-radius: 5px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 769px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1  card2  card3  card4"
+            "card5  card6  card7  card8";
+    }
+
+    .discover-grid .places-card img {
+        transition: all 0.5s ease-in-out;
+    }
+
+    .discover-grid .places-card img:hover {
+        transform: scale(1.05);
+        transition: all 0.5s ease-in-out;
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>❤️</text></svg>") 16 0, auto;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -772,6 +860,15 @@ input, select, textarea {
 
     .social-links {
         align-self: center;
+    }
+
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "card1  card2"
+            "card3  card4"
+            "card5  card6"
+            "card7  card8";
     }
 }
 
@@ -852,6 +949,19 @@ input, select, textarea {
 
     .spotlight-card img {
         max-width: 80px;
+    }
+
+    .discover-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
     }
 
     .link {
