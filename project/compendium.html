@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Emplore the Freeway Compendium, a collection of outfits in Infinity Nikki! Discover Miracle, Ability, and Stylish Outfits, including Momo's Cloaks!">
+    <meta name="author" content="Keiuko">
+    <title>Freeway Compendium | Nikki's Freeway</title>
+    <!-- Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Playfair+Display&family=Roboto&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="project-favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Scripts -->
+    <script src="scripts/main.js" type="module"></script>
+</head>
+<body data-page="compendium">
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Nikki's Freeway Logo" width="50" height="50">
+            <h1>Nikki's Freeway</h1>
+        </div>
+        <nav class="nav-menu">
+            <div class="hamburger-menu">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="compendium.html" class="active">Compendium</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Freeway Compendium</h2>
+        <aside class="compendium-filters">
+            <div>
+                <p>Styles</p>
+                <button>Fresh</button>
+                <button>Elegant</button>
+                <button>Sexy</button>
+                <button>Sweet</button>
+                <button>Cool</button>
+            </div>
+
+            <div>
+                <p>Types</p>
+                <button>Miracle Outfit</button>
+                <button>Ability Outfit</button>
+                <button>Stylish Outfit</button>
+                <button>Other</button>
+                <button>Momo's Cloak</button>
+            </div>
+        </aside>
+
+        <div class="outfits-container">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> <strong>Keiuko</strong>. A project by Julyanne Lee.</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
